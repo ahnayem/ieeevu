@@ -3,11 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Auth extends CI_Controller {
 
-	// public function __construct()
-	// {
-	// 	parent::__construct();
-	// 	$this->load->database();
-	// }
+	function __construct()
+	{
+		parent::__construct();
+		if($this->session->userdata('id')){
+			redirect('dashboard/index');
+		}
+	}
 
 
 	public function login()
@@ -27,14 +29,15 @@ class Auth extends CI_Controller {
 			$data['email']=$result->email;
 
 			$this->session->set_userdata($data);
-			redirect('admin','refresh');
+			redirect('dashboard/index');
 
 		} else {
 
-			$data['error']='Invalid Email or Eassword!';
+			$data['message']='Invalid Email or Eassword!';
 			$this->session->set_userdata($data);
 			redirect('page/signin');
 		}
 		
 	}
+
 }

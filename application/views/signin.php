@@ -1,3 +1,7 @@
+<?php if ($this->session->userdata('id')) {
+    redirect('dashboard/index');
+} ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -57,25 +61,6 @@
             <div class="col-md-2"></div>
             <div class="col-md-8 login-form">
                 <h3 style="margin-bottom: 10%!important"><b>LOGIN HERE</b></h3>
-                
-                <?php $error=$this->session->userdata('error');
-
-                if(isset($error)){
-                ?>
-                <div class="row">
-                    <div class="col-md-12" style="margin-top: 15px;">
-                        <div class='alert alert-danger text-center' role='alert'>
-                            <strong><?php
-                                    echo $error;
-                                    $this->session->unset_userdata('error');
-                                
-                                ?>
-                            </strong>
-                        </div>
-                    </div>
-                </div>
-            <?php } ?>
-
                 <form action="<?php echo base_url();?>login" method="post">
                     <div class="form-group">
                         <input type="text" name="email" class="form-control" placeholder="Your Email *" required="" />
@@ -87,7 +72,7 @@
                         <input type="submit" class="btnSubmit" value="Login" />
                     </div>
                     <div class="form-group">
-                        <a href="#" class="btnForgetPwd" value="Login">Forget Password?</a>
+                        <!-- <a href="#" class="btnForgetPwd" value="Login">Forget Password?</a> -->
                         <a href="<?php echo base_url();?>" style="float: right;" class="btnForgetPwd" value="Login"><i class="fas fa-arrow-circle-left"></i> Back To Home</a>
                     </div>
                       
@@ -99,3 +84,15 @@
     </div>
 </body>
 </html>
+
+
+<?php 
+
+    $message=$this->session->userdata('message');
+
+    if(isset($message)){
+        echo "<script>alert('$message');</script>";
+        $this->session->set_userdata('message');
+     } 
+
+ ?>
