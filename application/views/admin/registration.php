@@ -79,7 +79,7 @@
                         <li class="nav-item dropdown">
                             
                             <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span style="color: #ffb848; font-weight: bold">Hello, <?php echo $this->session->userdata('name') ?>&nbsp</span>
+                                <span style="color: #ffb848; font-weight: bold">Hello, <?php echo $this->session->userdata('user_name') ?>&nbsp</span>
                                 <img src="<?php echo base_url()?>resources/assets1/img/users/1.jpg" alt="user" class="rounded-circle" width="31"></a>
                             <div class="dropdown-menu dropdown-menu-right user-dd animated">
                                 <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> My Profile</a>
@@ -114,7 +114,7 @@
                         
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-file"></i><span class="hide-menu">Event </span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="<?php echo base_url()?>dashboard/events" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> All Events </span></a></li>
+                                <li class="sidebar-item"><a href="<?php echo base_url()?>dashboard/events" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> All Event </span></a></li>
                                 <li class="sidebar-item"><a href="<?php echo base_url()?>dashboard/create_event" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Create New </span></a></li>
                             </ul>
                         </li>
@@ -157,8 +157,8 @@
                         <div class="ml-auto text-right">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Library</li>
+                                    <li class="breadcrumb-item"><a href="<?php echo base_url()?>dashboard/index">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Registration</li>
                                 </ol>
                             </nav>
                         </div>

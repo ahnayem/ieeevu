@@ -11,7 +11,16 @@
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url()?>resources/assets1/img/icon.ico">
     <title>Admin Dashboard</title>
-    <link href="<?php echo base_url()?>resources/assets1/css/style.min.css" rel="stylesheet">
+
+    <link href="<?php echo base_url()?>resources/assets1/css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url()?>resources/assets1/css/select2.min.css" rel="stylesheet" type="text/css">
+    
+
+    <link rel="stylesheet" type="<?php echo base_url()?>resources/assets1/css/quill.snow.css">
+    <link href="<?php echo base_url()?>resources/assets1/css/style.min.css" rel="stylesheet" type="text/css">
+
+    
+
 </head>
 
 <body>
@@ -79,7 +88,7 @@
                         <li class="nav-item dropdown">
                             
                             <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span style="color: #ffb848; font-weight: bold">Hello, <?php echo $this->session->userdata('name') ?>&nbsp</span>
+                                <span style="color: #ffb848; font-weight: bold">Hello, <?php echo $this->session->userdata('user_name') ?>&nbsp</span>
                                 <img src="<?php echo base_url()?>resources/assets1/img/users/1.jpg" alt="user" class="rounded-circle" width="31"></a>
                             <div class="dropdown-menu dropdown-menu-right user-dd animated">
                                 <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> My Profile</a>
@@ -114,7 +123,7 @@
                         
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-file"></i><span class="hide-menu">Event </span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="<?php echo base_url()?>dashboard/events" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> All Events </span></a></li>
+                                <li class="sidebar-item"><a href="<?php echo base_url()?>dashboard/events" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> All Event </span></a></li>
                                 <li class="sidebar-item"><a href="<?php echo base_url()?>dashboard/create_event" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Create New </span></a></li>
                             </ul>
                         </li>
@@ -157,8 +166,8 @@
                         <div class="ml-auto text-right">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Library</li>
+                                    <li class="breadcrumb-item"><a href="<?php echo base_url()?>dashboard/index">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Create Event</li>
                                 </ol>
                             </nav>
                         </div>
@@ -177,56 +186,103 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="d-md-flex align-items-center">
-                                    <div>
-                                        <h4 class="card-title">Analysis</h4>
-                                        <h5 class="card-subtitle">Overview from the beginning</h5>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <h4 class="card-title">Create Event</h4>
+                                                <h5 class="card-subtitle">Please fill the all fields*</h5>
+                                            </div>
+                                            <div class="col-md-6">
+
+                                                <?php
+
+                                                if ($this->session->userdata('message')) {
+
+                                                    echo '<div class="alert alert-success"  align="center">
+                                                            Event uploaded successfully!
+                                                    </div>';
+                                                    $this->session->unset_userdata('message');
+
+                                                    
+                                                } if($this->session->userdata('error')) {
+                                                    echo '<div class="alert alert-warning center"  align="center">
+                                                            <p>Upload failed</p>
+                                                    </div>';
+                                                    $this->session->unset_userdata('error');
+                                                } ?>
+                                            </div>
+                                            <div class="col-md-3"></div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                   <i class="fa fa-user m-b-5 font-16"></i>
-                                                   <h5 class="m-b-0 m-t-5">2540</h5>
-                                                   <small class="font-light">Total Users</small>
+                                        <div class="card">
+                                            <form class="form-horizontal" action="<?php echo base_url()?>dashboard/create_event_upload_data" method="post" enctype="multipart/form-data">
+                                                <div class="card-body">
+                                                    <div class="form-group row">
+                                                        <label for="title" class="col-sm-2 text-right control-label col-form-label">Title</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="text" class="form-control" name="title" id="title" placeholder="" required>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label for="detail" class="col-sm-2 text-right control-label col-form-label">Detail</label>
+                                                        <div class="col-sm-10">
+                                                            <textarea class="form-control" id="detail" name="detail" rows="5" required></textarea>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label for="tag" class="col-md-2 text-right control-label col-form-label">Select Tag</label>
+                                                        <div class="col-md-10">
+                                                            <select id="tag" name="tag" class="select2 form-control custom-select" style="width: 100%; height:36px;" required>
+                                                                <option>Select</option>
+                                                                    <option value="Featured">Featured</option>
+                                                                    <option value="Technical">Technical</option>
+                                                                    <option value="Technical">Non-Technical</option>
+                                                                    <option value="Seminar">Seminar</option>
+                                                                    <option value="Other">Other</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div  class="form-group row">
+                                                        <label for="event_type" class="col-md-2 text-right control-label col-form-label">Event Type</label>
+                                                        <div class="col-md-10">
+                                                            <select id="event_type" name="event_type" class="select2 form-control custom-select" style="width: 100%; height:36px;" required>
+                                                                    <option>Select</option>
+                                                                    <option value="Recent">Recent</option>
+                                                                    <option value="Upcoming">Upcoming</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-2 text-right control-label col-form-label">Date</label>
+                                                        <div class="col-sm-10 input-group">
+                                                            <input type="text" name="date" class="form-control" id="datepicker-autoclose" placeholder="mm/dd/yyyy" required>
+                                                            <div class="input-group-append">
+                                                                <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <label for="image" class="col-md-2 text-right control-label"></label>
+                                                        <div class="col-md-10">
+                                                            <input type="file" id="image" name="image" class="form-control" id="" required>
+                                                        </div>
+                                                    </div>
+
                                                 </div>
-                                            </div>
-                                             <div class="col-6">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                   <i class="fa fa-plus m-b-5 font-16"></i>
-                                                   <h5 class="m-b-0 m-t-5">120</h5>
-                                                   <small class="font-light">New Users</small>
+                                                <div class="border-top">
+                                                    <div class="card-body">
+                                                        <input type="submit" name="submit" class="btn btn-primary" value="Submit">
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-6 m-t-15">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                   <i class="fa fa-file-alt m-b-5 font-16"></i>
-                                                   <h5 class="m-b-0 m-t-5">656</h5>
-                                                   <small class="font-light">Total Posts</small>
-                                                </div>
-                                            </div>
-                                             <div class="col-6 m-t-15">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                   <i class="fa fa-tag m-b-5 font-16"></i>
-                                                   <h5 class="m-b-0 m-t-5">21</h5>
-                                                   <small class="font-light">Total Events</small>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 m-t-15">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                   <i class="fa fa-archive m-b-5 font-16"></i>
-                                                   <h5 class="m-b-0 m-t-5">100</h5>
-                                                   <small class="font-light">Total Archives</small>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 m-t-15">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                   <i class="fa fa-globe m-b-5 font-16"></i>
-                                                   <h5 class="m-b-0 m-t-5">12</h5>
-                                                   <small class="font-light">Online users</small>
-                                                </div>
-                                            </div>
+                                            </form>
                                         </div>
                                     </div>
                                     <!-- column -->
@@ -267,11 +323,27 @@
     <script src="<?php echo base_url()?>resources/assets1/js/waves.js"></script>
     <!--Menu sidebar -->
     <script src="<?php echo base_url()?>resources/assets1/js/sidebarmenu.js"></script>
+
+    <script src="<?php echo base_url()?>resources/assets1/js/select2.min.js"></script>
+    <script src="<?php echo base_url()?>resources/assets1/js/select2.full.min.js"></script>
     <!--Custom JavaScript -->
     <script src="<?php echo base_url()?>resources/assets1/js/custom.min.js"></script>
     <!--This page JavaScript -->
+    <script src="<?php echo base_url()?>resources/assets1/js/bootstrap-datepicker.min.js"></script>
+    <script>
+    
+        /*datwpicker*/
+        jQuery('.mydatepicker').datepicker();
+        jQuery('#datepicker-autoclose').datepicker({
+            autoclose: true,
+            todayHighlight: true
+        });
+        var quill = new Quill('#editor', {
+            theme: 'snow'
+        });
+
+    </script>
 
 </body>
 
 </html>
-

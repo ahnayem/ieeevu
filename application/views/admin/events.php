@@ -12,6 +12,22 @@
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url()?>resources/assets1/img/icon.ico">
     <title>Admin Dashboard</title>
     <link href="<?php echo base_url()?>resources/assets1/css/style.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <script src="<?php echo base_url()?>resources/assets1/js/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <style type="text/css">
+        th{
+            text-align: center;
+        }
+
+        thead{
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>
@@ -79,7 +95,7 @@
                         <li class="nav-item dropdown">
                             
                             <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span style="color: #ffb848; font-weight: bold">Hello, <?php echo $this->session->userdata('name') ?>&nbsp</span>
+                                <span style="color: #ffb848; font-weight: bold">Hello, <?php echo $this->session->userdata('user_name') ?>&nbsp</span>
                                 <img src="<?php echo base_url()?>resources/assets1/img/users/1.jpg" alt="user" class="rounded-circle" width="31"></a>
                             <div class="dropdown-menu dropdown-menu-right user-dd animated">
                                 <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> My Profile</a>
@@ -114,7 +130,7 @@
                         
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-file"></i><span class="hide-menu">Event </span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="<?php echo base_url()?>dashboard/events" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> All Events </span></a></li>
+                                <li class="sidebar-item"><a href="<?php echo base_url()?>dashboard/events" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span class="hide-menu"> All Event </span></a></li>
                                 <li class="sidebar-item"><a href="<?php echo base_url()?>dashboard/create_event" class="sidebar-link"><i class="mdi mdi-note-plus"></i><span class="hide-menu"> Create New </span></a></li>
                             </ul>
                         </li>
@@ -157,8 +173,8 @@
                         <div class="ml-auto text-right">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Library</li>
+                                    <li class="breadcrumb-item"><a href="<?php echo base_url()?>dashboard/index">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">All Event</li>
                                 </ol>
                             </nav>
                         </div>
@@ -176,57 +192,75 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-body">
-                                <div class="d-md-flex align-items-center">
+                                <div class="row" style="padding-bottom: 20px">
+                                    <div class="col-md-4 d-md-flex align-items-center">
                                     <div>
-                                        <h4 class="card-title">Analysis</h4>
+                                        <h4 class="card-title">All Event</h4>
                                         <h5 class="card-subtitle">Overview from the beginning</h5>
                                     </div>
                                 </div>
+                                    <div class="col-md-4">
+
+                                        <?php
+
+                                        if ($this->session->userdata('message')) {
+                                            $message=$this->session->userdata('message');
+
+                                            echo '<div class="alert alert-success"  align="center">
+                                                    Event update successfully!
+                                            </div>';
+                                            $this->session->unset_userdata('message');
+
+                                            
+                                        } if($this->session->userdata('error')) {
+                                            echo '<div class="alert alert-warning center"  align="center">
+                                                    Update failed
+                                            </div>';
+                                            $this->session->unset_userdata('error');
+                                        } ?>
+                                    </div>
+                                    <div class="col-md-4"></div>
+                                </div>
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                   <i class="fa fa-user m-b-5 font-16"></i>
-                                                   <h5 class="m-b-0 m-t-5">2540</h5>
-                                                   <small class="font-light">Total Users</small>
-                                                </div>
-                                            </div>
-                                             <div class="col-6">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                   <i class="fa fa-plus m-b-5 font-16"></i>
-                                                   <h5 class="m-b-0 m-t-5">120</h5>
-                                                   <small class="font-light">New Users</small>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 m-t-15">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                   <i class="fa fa-file-alt m-b-5 font-16"></i>
-                                                   <h5 class="m-b-0 m-t-5">656</h5>
-                                                   <small class="font-light">Total Posts</small>
-                                                </div>
-                                            </div>
-                                             <div class="col-6 m-t-15">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                   <i class="fa fa-tag m-b-5 font-16"></i>
-                                                   <h5 class="m-b-0 m-t-5">21</h5>
-                                                   <small class="font-light">Total Events</small>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 m-t-15">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                   <i class="fa fa-archive m-b-5 font-16"></i>
-                                                   <h5 class="m-b-0 m-t-5">100</h5>
-                                                   <small class="font-light">Total Archives</small>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 m-t-15">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                   <i class="fa fa-globe m-b-5 font-16"></i>
-                                                   <h5 class="m-b-0 m-t-5">12</h5>
-                                                   <small class="font-light">Online users</small>
-                                                </div>
-                                            </div>
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered" id="event-table" width="100%" cellspacing="0">
+                                                <thead>
+                                                  <tr>
+                                                    <th>SL</th>
+                                                    <th>Title</th>
+                                                    <th>Detail</th>
+                                                    <th>Post By</th>
+                                                    <th>Tag</th>
+                                                    <th>Type</th>
+                                                    <th>Date</th>
+                                                    <th>Image</th>
+                                                    <th>Action</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <?php $i=1; foreach ($result as $row): ?>
+                                                  <tr>
+                                                    <td><?php echo $i++ ?></td>
+                                                    <td><?php echo substr($row->title,0,20).'...' ?></td>
+                                                    <td><?php echo substr($row->detail,0,20).'...' ?></td>
+                                                    <td><?php echo $row->post_by ?></td>
+                                                    <td><?php echo $row->tag ?></td>
+                                                    <td><?php echo $row->type ?></td>
+                                                    <td><?php echo $row->date ?></td>
+                                                    <td><a href="<?php echo base_url()?>resources/assets1/img/events_photo/<?php echo $row->image?>" target="_blank">click to view</a></td>
+
+                                                    <td><center>
+
+                                                    <a href="<?php echo base_url()?>dashboard/edit_event/<?php echo $row->id?>" class="btn btn-info"><i class="fa fa-edit"></i></a>
+
+
+
+                                                    <a href="<?php echo base_url()?>dashboard/delete_event/<?php echo $row->id?>" class="btn btn-warning"><i class="fa fa-trash-alt"></i></a></center></td>
+                                                </tr>
+                                                  <?php endforeach; ?>
+                                                </tbody>            
+                                            </table>
                                         </div>
                                     </div>
                                     <!-- column -->
@@ -257,7 +291,7 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
-    <script src="<?php echo base_url()?>resources/assets1/js/jquery.min.js"></script>
+    
     <!-- Bootstrap tether Core JavaScript -->
     <script src="<?php echo base_url()?>resources/assets1/js/popper.min.js"></script>
     <script src="<?php echo base_url()?>resources/assets1/js/bootstrap.min.js"></script>
@@ -271,7 +305,15 @@
     <script src="<?php echo base_url()?>resources/assets1/js/custom.min.js"></script>
     <!--This page JavaScript -->
 
+    <!-- Bootstrap JS CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <!-- datatable -->
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#event-table').DataTable();
+    });
+    </script>
 </body>
 
 </html>
-

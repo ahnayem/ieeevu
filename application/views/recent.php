@@ -114,7 +114,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="container" style="text-align: center;">
-                                        <di class="row">
+                                        <div class="row">
                                             <div class="col-md-6">
                                                 <article class="clearfix blogpost-1 post-6969 post type-post status-publish format-image hentry category-featured category-non-technical-talk category-seminars category-workshop post_format-post-format-image">
                                                     <div class="overlay-container">
@@ -235,7 +235,7 @@
                                                         </ul> <a class="pull-right link" href="<?php echo base_url();?>detail"><span>Read more</span></a></footer>
                                                 </article>
                                             </div>
-                                        </di>
+                                        </div>
                                     </div>
                                 </div>
 

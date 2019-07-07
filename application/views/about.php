@@ -118,24 +118,20 @@
                                 </div>
                                 <div class="row">
                                     <div class="container" style="text-align: justify;">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        <p>IEEE is the world’s largest professional association dedicated to advancing technological innovation and excellence for the benefit of humanity. IEEE and its members inspire a global community through IEEE’s highly cited publications, conferences, technology standards, and professional and educational activities. Not only is IEEE the world’s largest technical and professional society, it also publishes a significant amount of the electrical engineering and computer-science literature in the world. <br><br><br>
 
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        “IEEE” Stands for Institute of Electrical and Electronics Engineers. IEEE has over 400,000 members in more than 160 countries worldwide. IEEE worldwide membership is geographically divided into ten Regions. These Regions are further divided into Sections that serve as the centers of activity for professional engineers at the local level. Our Student branch is under IEEE Bangladesh Section.IEEE Bangladesh Section was formed in 1993 with 54 members. Since then the number of membershipis growing steadily.
+                                        </p>
+                                    </div>
+                                    <div style="padding-bottom: 20px;"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="container" style="text-align: justify;">
+                                        <h2><b>About IEEE VU SB:</b></h2>
+                                        <p>Our IEEE Student branch was formed on 26th April,  2019. We started our student branch with 37 members. Our student branch consists of some active members and dedicated Volunteers. <br><br>
+
+                                        Our Student branch is committed to work for the advancement of technology for the betterment of humanity.
+                                        IEEE Varendra University Student Branch aims to organize seminars, workshops, sessions, competitions, tutorials etc. By this we want to contribute in the advancement in research and technology and share our knowledge with the world by IEEE Community and also gain knowledge from others via IEEE Community.</p>
                                     </div>
                                 </div>
                             </section>

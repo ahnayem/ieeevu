@@ -8,23 +8,23 @@
     <meta name="generator" content="Powered by IEEE VU.">
     <meta name="msapplication-TileImage" content="resources/assets/img/uploads/2016/04/icon.png">
 
-    <link type="text/css" media="all" href="resources/assets/css/autoptimize.css" rel="stylesheet">
+    <link type="text/css" media="all" href="<?php echo base_url();?>resources/assets/css/autoptimize.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-    <link rel="icon" type="image/png" href="resources/assets/img/uploads/2016/03/Untitled-2.png">
+    <link rel="icon" type="image/png" href="<?php echo base_url();?>resources/assets/img/uploads/2016/03/Untitled-2.png">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
 
-    <link rel="icon" href="resources/assets/css/fontawesome.min.css" sizes="32x32">
-    <link rel="icon" href="resources/assets/img/icon/icon.ico" sizes="32x32">
-    <link rel="icon" href="resources/assets/img/icon/icon.ico" sizes="192x192">
-    <link rel="apple-touch-icon-precomposed" href="resources/assets/img/icon/icon.ico">
+    <link rel="icon" href="<?php echo base_url();?>resources/assets/css/fontawesome.min.css" sizes="32x32">
+    <link rel="icon" href="<?php echo base_url();?>resources/assets/img/icon/icon.ico" sizes="32x32">
+    <link rel="icon" href="<?php echo base_url();?>resources/assets/img/icon/icon.ico" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="<?php echo base_url();?>resources/assets/img/icon/icon.ico">
 
 
 
 
-    <script type="text/javascript" src="resources/assets/js/jquery.js"></script>
-    <script type="text/javascript" src="resources/assets/js/fontawesome.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>resources/assets/js/jquery.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>resources/assets/js/fontawesome.min.js"></script>
 
     
     
@@ -61,7 +61,7 @@
                     <div class="col-md-4"></div>
                     <div class="col-md-4">
                         <div class="logo">
-                            <a href="<?php echo base_url();?>"><img id="logo" class="img-responsive" src="resources/assets/img/icon/logo-main.png" data-no-retina alt="IEEE VU"></a>
+                            <a href="<?php echo base_url();?>"><img id="logo" class="img-responsive" src="<?php echo base_url();?>resources/assets/img/icon/logo-main.png" data-no-retina alt="IEEE VU"></a>
                         </div>
                     </div>
                     <div class="col-md-4"></div>
@@ -116,86 +116,25 @@
                                 <div class="row">
                                     <div class="container" style="text-align: center;">
                                         <article id="post-6969" class="clearfix blogpost post-6969 post type-post status-publish format-image hentry category-featured category-non-technical-talk category-seminars category-workshop post_format-post-format-image">
+                                            <?php $date=$row->date ?>
                                             <di class="row">
                                                 <div class="col-md-2" style="width: 10%">
                                                     <div class="side">
-                                                        <div class="post-info-1"><span class="day">01</span><span class="month">Dec, 2018</span></div>
+                                                        <div class="post-info-1"><span class="day"><?php echo date("d", strtotime($date)); ?></span><span class="month"><?php echo date("M, Y", strtotime($date)); ?></span></div>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-10" style="text-align: justify;">
                                                     <header>
-                                                        <h2 style="background-color: #505050; color: #fff;height: 20%!important;padding: 10px;">IEEE AIUB Student Branch presents “Student Professional Awareness Venture”</h2>
-                                                        <div class="post-info"> <span style="color: #000"><i class="fa fa-user pr-5"></i> By Rafid Azad</span><br><br>
+                                                        <h2 style="background-color: #505050; color: #fff;height: 20%!important;padding: 10px;"><?php echo $row->title?></h2>
+                                                        <div class="post-info"> <span style="color: #000"><i class="fa fa-user pr-5"></i> By <?php echo $row->post_by?></span><br><br>
                                                     </header>
                                                     <div class="blogpost-content" style="margin: 0px;">
-                                                        <a href="#" class="thumb popup-img"> <img class="aligncenter size-large wp-image-6970" src="https://ieeeaiubsb.com/wp-content/uploads/2018/12/NBI_7339.jpg" alt="" width="1024" height="768" />
+                                                        <a href="#" class="thumb popup-img"> <img class="aligncenter size-large wp-image-6970" src="<?php echo base_url();?>resources/assets1/img/events_photo/<?php echo $row->image?>" alt="" width="1024" height="768" />
                                                         </a>
                                                         <div class="blogpost-body">
-                                                            <p style="text-align: justify;">Lorem ipsum dolor, consectetur adipisicing elit, sed do eiusmod
-                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-                                                            <br><br>
-
-                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-                                                             <br><br>
-                                                            
-                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                                        </p>
+                                                            <p style="text-align: justify;">
+                                                                <?php echo $row->detail;?>
+                                                            </p>
                                                         </div>
                                                     </div>
                                                     <footer class="clearfix"></footer>
@@ -232,8 +171,8 @@
             </div>
         </div>
     </footer>
-    <link rel="stylesheet" id="googleFontsPT-css" href="resources/assets/css/css.css" type="text/css" media="all">
-    <script data-cfasync="false" src="resources/assets/js/email-decode.min.js"></script>
+    <link rel="stylesheet" id="googleFontsPT-css" href="<?php echo base_url();?>resources/assets/css/css.css" type="text/css" media="all">
+    <script data-cfasync="false" src="<?php echo base_url();?>resources/assets/js/email-decode.min.js"></script>
     <script type="text/javascript">
         var edsanimate_options = {
             "offset": "75",
@@ -250,7 +189,7 @@
             "metadata": "no"
         };
     </script>
-    <script type="text/javascript" defer src="resources/assets/js/autoptimize.js"></script>
+    <script type="text/javascript" defer src="<?php echo base_url();?>resources/assets/js/autoptimize.js"></script>
 </body>
 
 </html>

@@ -113,8 +113,8 @@
                                     </div>
                                 </div>
                                 <div class="row" style="padding-bottom: 70vh">
-                                    <div class="container" style="text-align: center;">
-                                        <br><br><p>Our Publications will be upload here regularly.. &#128077</p>
+                                    <div class="container" style="text-align: justify;">
+                                        <br><br><p>IEEE VU Student branch is organizing programs and different activities for coping with the present technological environment. The branch is passionate to create a newsletter to exhibit the functions, activities, programs, achievements of the society.</p>
                                     </div>
                                 </div>
                             </section>

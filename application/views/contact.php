@@ -112,7 +112,7 @@
                                             <h1 class="special-heading">CONTACT</h1></div>
                                     </div>
                                 </div>
-                                <div class="row" style="padding-bottom: 70vh">
+                                <div class="row">
                                     <div class="container" style="text-align: center;">
                                         <div class="row">
                                             <div class="col-md-1"></div>
@@ -156,6 +156,65 @@
             </div>
         </section>
     </div>
+    <footer class="custom-footer">
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="footer-content">
+                            <h2 class="heading">ABOUT US</h2>
+                            <div class="textwidget">
+                                <p style=" text-align: justify;">IEEE Varendra University (VU) Student Branch was established in Rajshahi, Bangladesh and is registered under the Institute of Electrical and Electronics Engineers (IEEE) in Rajshahi, Bangladesh.</p>
+                                <ul class="info">
+                                    <li><i class="fa fa-map-marker"></i> 529/1, Kazla, Motihar, Rajshahi</li>
+                                    <li><i class="fa fa-phone"></i> +880 1234 567 890</li>
+                                    <li><i class="fa fa-envelope-o"></i> ieevu@vu.edu.bd</li>
+                                </ul>
+                                <ul class="social-links">
+                                    <li>
+                                        <a href="#" target="_blank"> <i class="fa fa-facebook"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank"> <i class="fa fa-twitter"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank"> <i class="fa fa-instagram"></i> </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank"> <i class="fa fa-linkedin"></i> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="footer-content">
+                            <div class="textwidget">
+                                <div class="mapouter img-responsive"><div class="gmap_canvas img-responsive"><iframe class="" width="600" height="310" id="gmap_canvas" src="https://maps.google.com/maps?q=varendra%20university%2C%20rajshahi&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><style>.mapouter{position:relative;text-align:right;height:310px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:320px;width:600px;}</style></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="subfooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p></p>
+                        <p>Copyright &copy 2019 IEEE VU All Rights Reserved,
+                            <br> Powered By : <a href="#" target="_blank" style="color: #ba3f31;"> DEPT. OF EEE, VU</a></p>
+                        <p></p>
+                    </div>
+                    <div class="col-md-6">
+                        <nav class="navbar navbar-default" role="navigation">
+                            <div class="navbar-collapse" id="navbar-collapse-2"></div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     <footer class="custom-footer">
         <div class="subfooter">
             <div class="container">

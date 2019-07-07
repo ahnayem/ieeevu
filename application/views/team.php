@@ -113,8 +113,8 @@
                                     </div>
                                 </div>
                                 <div class="row" style="padding-bottom: 70vh">
-                                    <div class="container" style="text-align: center;">
-                                        <br><br><p>Our organized team member will be available soon!</p>
+                                    <div class="container" style="text-align: justify;">
+                                        <br><br><p>IEEE VU Student Branch has started the journey with thirty-seven members. The number of Members is rising with the collaboration of active and dedicated volunteers and supportive faculty members. The enthusiastic members are doing their best to make all the programs successful. Please feel free to explore our site and learn more about our activities, different committees, ventures and moments.</p>
                                     </div>
                                 </div>
                             </section>

@@ -10,9 +10,23 @@ class Page extends CI_Controller {
 
 	public function recent(){ $this->load->view('recent'); }
 
-	public function upcoming(){ $this->load->view('upcoming'); }
 
-	public function detail(){ $this->load->view('detail'); }
+	public function upcoming(){ 
+
+		$this->load->model('model');
+		$data['result'] = $this->model->upcoming_events_list();
+
+		$this->load->view('upcoming',$data);
+	}
+
+
+	public function detail($id){
+
+		$this->load->model('model');
+		$data['row'] = $this->model->event_detail($id);
+
+		$this->load->view('detail',$data);
+	}
 
 	public function publication(){ $this->load->view('publication'); }
 

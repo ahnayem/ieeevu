@@ -6,7 +6,7 @@ class Auth extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
-		if($this->session->userdata('id')){
+		if($this->session->userdata('user_id')){
 			redirect('dashboard/index');
 		}
 	}
@@ -24,9 +24,9 @@ class Auth extends CI_Controller {
 
 		if ($result) {
 
-			$data['id']=$result->id;
-			$data['name']=$result->name;
-			$data['email']=$result->email;
+			$data['user_id']=$result->id;
+			$data['user_name']=$result->name;
+			$data['user_email']=$result->email;
 
 			$this->session->set_userdata($data);
 			redirect('dashboard/index');

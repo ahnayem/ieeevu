@@ -1,6 +1,17 @@
-<?php if ($this->session->userdata('id')) {
+<?php if ($this->session->userdata('user_id')) {
     redirect('dashboard/index');
 } ?>
+
+<?php 
+
+    $message=$this->session->userdata('message');
+
+    if(isset($message)){
+        echo "<script>alert('$message');</script>";
+        $this->session->set_userdata('message');
+     } 
+
+ ?>
 
 <!DOCTYPE html>
 <html>
@@ -15,17 +26,20 @@
 <!------ Include the above in your HEAD tag ---------->
 
 <style type="text/css">
+    body{
+            background-color: #737373;
+    }
     .login-container{
-        padding: 8%;
+        padding: 9%;
     }
     .login-form{
         padding: 5%;
-        background: #f05837;
+        background: #ff6600;
         box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
     }
     .login-form h3{
         text-align: center;
-        margin-bottom:12%;
+        margin-bottom:10%;
         color: #fff;
     }
     .btnSubmit{
@@ -84,15 +98,3 @@
     </div>
 </body>
 </html>
-
-
-<?php 
-
-    $message=$this->session->userdata('message');
-
-    if(isset($message)){
-        echo "<script>alert('$message');</script>";
-        $this->session->set_userdata('message');
-     } 
-
- ?>

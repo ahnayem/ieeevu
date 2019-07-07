@@ -158,7 +158,7 @@
                             <section>
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12" style="background: transparent  ">
-                                        <div style="padding-bottom: 100px;"></div>
+                                        <div style="padding-bottom: 80px;"></div>
                                     </div>
                                 </div>
                             </section>
@@ -170,45 +170,21 @@
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12" style="background: transparent  ">
                                         <div class="heading-block text-center heading-block-line">
-                                            <h1 class="special-heading">OUR MISSION & VISSION</h1></div>
+                                            <h1 class="special-heading">WELCOME</h1></div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-xs-12 col-sm-4" style="background: transparent  ">
-                                        <div class="feature-box text-center media-box  object-non-visible" data-animation-effect="fade-in-right-large" data-effect-delay="500">
-                                            <div class="fbox-media"> <img data-no-retina src="resources/assets/img/uploads/2015/02/technology-512x512.jpg" alt="technology" width="512" height="512" class="img-responsive"></div>
-                                            <div class="fbox-desc">
-                                                <h2>Technology</h2> <span class="subtitle"></span></div>
-                                        </div>
-                                        <div class="text-block shortcode-container">
-                                            <p style="text-align: justify;"><span class="subtitle"></span></p>
-                                            <div class="eds-animate edsanimate-sis-hidden " data-eds-entry-animation="fadeInUp" data-eds-entry-delay="0.5" data-eds-entry-duration="0.5" data-eds-entry-timing="linear" data-eds-exit-animation data-eds-exit-delay data-eds-exit-duration data-eds-exit-timing data-eds-repeat-count="1" data-eds-keep="yes" data-eds-animate-on="scroll" data-eds-scroll-offset="40">Keeping in line with the first half of the IEEE tagline of "Advancing Technology ... ", we strive to develop core skills in all our members and provide them with access to the latest technical research and knowledge. We hope to empower them with the necessary tools for developing solutions to the major engineering problems faced in our community.</div>
-                                            <p></p>
-                                        </div>
+                                    <div class="col-xs-12 col-sm-2" style="background: transparent  "></div>
+                                    <div class="col-xs-12 col-sm-8" style="background: transparent  ">
+                                        <p><span style="text-align: justify;">Welcome to IEEE Student Branch of Varendra University.</span> <br><br> 
+                                        <span style="text-align: justify;">The Institute of Electrical and Electronic Engineers is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity. All the Information about IEEE and How to Join is IEEE is available on this site. Explore the site to learn more.</span>
+                                        </p>
                                     </div>
-                                    <div class="col-xs-12 col-sm-4" style="background: transparent  ">
-                                        <div class="feature-box text-center media-box  object-non-visible" data-animation-effect="fade-in-right-big" data-effect-delay="700">
-                                            <div class="fbox-media"> <img data-no-retina src="resources/assets/img/uploads/2015/02/Blank-Print-Document-2-417x417.png" alt width="417" height="417" class="img-responsive"></div>
-                                            <div class="fbox-desc">
-                                                <h2>Humanity</h2> <span class="subtitle"></span></div>
-                                        </div>
-                                        <div class="text-block shortcode-container">
-                                            <p style="text-align: justify;"><span class="subtitle"></span></p>
-                                            <div class="eds-animate edsanimate-sis-hidden " data-eds-entry-animation="fadeInUp" data-eds-entry-delay="1" data-eds-entry-duration="0.5" data-eds-entry-timing="linear" data-eds-exit-animation data-eds-exit-delay data-eds-exit-duration data-eds-exit-timing data-eds-repeat-count="1" data-eds-keep="yes" data-eds-animate-on="scroll" data-eds-scroll-offset="40">We are keen on addressing humanitarian challenges; fulfilling the last half of the IEEE tagline: "... For Humanity". Cultivating partnerships with charitable and philanthropic organizations, we engage in making a difference in the lives of others, support those in need, and encourage the youth to join the STEM fields.</div>
-                                            <p></p>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-4" style="background: transparent  ">
-                                        <div class="feature-box text-center media-box  object-non-visible" data-animation-effect="fade-in-right-big" data-effect-delay="900">
-                                            <div class="fbox-media"> <img data-no-retina src="resources/assets/img/uploads/2015/02/CONG-404x404.png" alt width="404" height="404" class="img-responsive"></div>
-                                            <div class="fbox-desc">
-                                                <h2>Collaboration</h2> <span class="subtitle"></span></div>
-                                        </div>
-                                        <div class="text-block shortcode-container">
-                                            <p style="text-align: justify;"><span class="subtitle"></span></p>
-                                            <div class="eds-animate edsanimate-sis-hidden " data-eds-entry-animation="fadeInUp" data-eds-entry-delay="1.5" data-eds-entry-duration="0.5" data-eds-entry-timing="linear" data-eds-exit-animation data-eds-exit-delay data-eds-exit-duration data-eds-exit-timing data-eds-repeat-count="1" data-eds-keep="yes" data-eds-animate-on="scroll" data-eds-scroll-offset="40">Fostering collaboration and networking is vital to our ultimate goal. At IEEE AIUB Student Branch, we believe that the synergy created through cooperation and partnership, outweighs the merits of any personal accomplishment. We aspire to be both a platform and bridge; connecting students, professionals and researchers alike.</div>
-                                            <p></p>
-                                        </div>
+                                    <div class="col-xs-12 col-sm-2" style="background: transparent  "></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12" style="background: transparent  ">
+                                        <div style="padding-bottom: 50px;"></div>
                                     </div>
                                 </div>
                             </section>
@@ -228,7 +204,15 @@
                                 <div class="col-xs-12 col-sm-2" style="background: transparent  "></div>
                                 <div class="col-xs-12 col-sm-8" style="background: transparent  ">
                                     <div class="text-block shortcode-container" style="font-size: 18px;">
-                                        <p style="text-align: center; text-align: justify;"><span style="color: white;">IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity. IEEE and its members inspire a global community to innovate for a better tomorrow through its highly-cited publications, conferences, technology standards, and professional and educational activities. There are more than 420,000 IEEE members in more than 160 countries. Check out all the benefits you can get from a potential membership in the <a href="#" target="_blank"> Membership </a> section </span>. Here is our own growth over the years:</p>
+                                        <p style="text-align: center; text-align: justify;"><span style="color: white;">
+                                        <ul>
+                                        <li>To join community of over 420,000 technology and engineering professionals united by a common desire to continuously learn, interact, collaborate, and innovate.</li>
+                                        <li>To get the resources and opportunities you need to keep on top of changes in technology.</li>
+                                        <li>To get involved in standards development.</li>
+                                        <li>To network with other professionals in your local area or within a specific technical interest</li>
+                                        <li>To mentor the next generation of engineers and technologists.</li></ul>
+                                        and so much more....
+                                        </p>
                                     </div>
                                     <p></p>
                                 </div>
@@ -304,12 +288,40 @@
                             </section>
                         </div>
                     </div>
+
+                    <div class="  glacier-section light-color custom-bg pl" style="padding-top: 45px; padding-bottom: 45px; " id="section-5719be0c1c8c2">
+                        <div data-stellar-background-ratio="0.4" class="parallax  dark-translucent-bg" style="background-color: #333; background-size: cover; background-attachment: fixed"></div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                    <div class="col-xs-12 col-sm-12" style="background: transparent  ">
+                                        <div class="heading-block text-center heading-block-line">
+                                            <h1 class="special-heading">OUR GOAL</h1></div>
+                                    </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-2" style="background: transparent  "></div>
+                                <div class="col-xs-12 col-sm-8" style="background: transparent  ">
+                                    <div class="text-block shortcode-container" style="font-size: 18px;">
+                                        <p style="text-align: center; text-align: center;"><span style="color: white;">
+                                        Our Goal is to Grow our IEEE student branch Community and accomplish our missions and visions.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12" style="background: transparent  ">
+                                        <div style="padding-bottom: 50px;"></div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-2" style="background: transparent  "></div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
         </section>
     </div>
-    <footer class="custom-footer">
+    <footer class="custom-footer" style="padding-top: 60px;">
         <div class="footer">
             <div class="container">
                 <div class="row">
