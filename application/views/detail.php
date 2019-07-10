@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <title>IEEE VU :: Details</title>
     <meta name="generator" content="Powered by IEEE VU.">
-    <meta name="msapplication-TileImage" content="resources/assets/img/uploads/2016/04/icon.png">
+    <meta name="msapplication-TileImage" content="<?php echo base_url();?>resources/assets/img/uploads/2016/04/icon.png">
 
     <link type="text/css" media="all" href="<?php echo base_url();?>resources/assets/css/autoptimize.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,14 +20,9 @@
     <link rel="icon" href="<?php echo base_url();?>resources/assets/img/icon/icon.ico" sizes="192x192">
     <link rel="apple-touch-icon-precomposed" href="<?php echo base_url();?>resources/assets/img/icon/icon.ico">
 
-
-
-
     <script type="text/javascript" src="<?php echo base_url();?>resources/assets/js/jquery.js"></script>
     <script type="text/javascript" src="<?php echo base_url();?>resources/assets/js/fontawesome.min.js"></script>
-
-    
-    
+   
 </head>
 
 <body data-rsssl="1" class="home page-template-default page page-id-4 front builder not-breadcrumb preload group-blog masthead-fixed grid">

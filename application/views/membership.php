@@ -6,27 +6,22 @@
     <meta name="viewport" content="width=device-width">
     <title>IEEE VU :: Membership</title>
     <meta name="generator" content="Powered by IEEE VU.">
-    <meta name="msapplication-TileImage" content="resources/assets/img/uploads/2016/04/icon.png">
+    <meta name="msapplication-TileImage" content="<?php echo base_url();?>resources/assets/img/uploads/2016/04/icon.png">
 
-    <link type="text/css" media="all" href="resources/assets/css/autoptimize.css" rel="stylesheet">
+    <link type="text/css" media="all" href="<?php echo base_url();?>resources/assets/css/autoptimize.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-    <link rel="icon" type="image/png" href="resources/assets/img/uploads/2016/03/Untitled-2.png">
+    <link rel="icon" type="image/png" href="<?php echo base_url();?>resources/assets/img/uploads/2016/03/Untitled-2.png">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
 
-    <link rel="icon" href="resources/assets/css/fontawesome.min.css" sizes="32x32">
-    <link rel="icon" href="resources/assets/img/icon/icon.ico" sizes="32x32">
-    <link rel="icon" href="resources/assets/img/icon/icon.ico" sizes="192x192">
-    <link rel="apple-touch-icon-precomposed" href="resources/assets/img/icon/icon.ico">
+    <link rel="icon" href="<?php echo base_url();?>resources/assets/css/fontawesome.min.css" sizes="32x32">
+    <link rel="icon" href="<?php echo base_url();?>resources/assets/img/icon/icon.ico" sizes="32x32">
+    <link rel="icon" href="<?php echo base_url();?>resources/assets/img/icon/icon.ico" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="<?php echo base_url();?>resources/assets/img/icon/icon.ico">
 
-
-
-
-    <script type="text/javascript" src="resources/assets/js/jquery.js"></script>
-    <script type="text/javascript" src="resources/assets/js/fontawesome.min.js"></script>
-
-    
+    <script type="text/javascript" src="<?php echo base_url();?>resources/assets/js/jquery.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>resources/assets/js/fontawesome.min.js"></script>
     
 </head>
 
@@ -60,7 +55,7 @@
                     <div class="col-md-4"></div>
                     <div class="col-md-4">
                         <div class="logo">
-                            <a href="<?php echo base_url();?>"><img id="logo" class="img-responsive" src="resources/assets/img/icon/logo-main.png" data-no-retina alt="IEEE VU"></a>
+                            <a href="<?php echo base_url();?>"><img id="logo" class="img-responsive" src="<?php echo base_url();?>resources/assets/img/icon/logo-main.png" data-no-retina alt="IEEE VU"></a>
                         </div>
                     </div>
                     <div class="col-md-4"></div>
@@ -109,39 +104,31 @@
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12" style="background: transparent  ">
                                         <div class="heading-block text-center heading-block-line">
-                                            <h1 class="special-heading">MEMBERAHIP APPLICATION</h1></div>
+                                            <h1 class="special-heading">MEMBERAHIP</h1></div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="container" style="text-align: center;">
-                                        <br><p>Please fill all the fields carefully <span  style="color: red;">*</span></p><br>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-3"></div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Your Name *" value="" />
-                                        </div>
+                                    <div class="container" style="text-align: justify;">
+                                        
+                                        <h3>IEEE Xplore:</h3>
+                                        <P>Provides full-text access to the world's highest quality technical literature in engineering and technology.</P><br>
+                                        
+                                        <h3>IEEE Spectrum:</h3>
+                                        <P>Latest engineering, technology, research, and science news.</P><br>
 
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" placeholder="Your Email *" value="" />
-                                        </div>
+                                        <h3>IEEE .tv:</h3>
+                                        <P>an award-winning, Internet-based television network providing interesting programs.</P><br>
 
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Mobile *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="University ID *" value="" />
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Btach *" value="" />
-                                        </div>
-                                        <div class="form-group" align="center">
-                                            <input type="submit" class="btn btn-primary" name="submit" value="submit">
-                                        </div>
+                                        <h3>IEEE Potentials:</h3>
+                                        <P>IEEE Potentials is a magazine and is the publication dedicated to undergraduate and graduate students and young professionals.</P><br>
+
+                                        <h3>IEEE Scholarships:</h3>
+                                        <P>Provides Scholarships for deserving candidates.</P><br>
+
+                                        <h3>IEEE Job Site:</h3>
+                                        <P>Having opportunities to serve jobs for hardworking engineers.</P><br>
+                                        
                                     </div>
-                                    <div class="col-md-3"></div>
                                 </div>
                             </section>
                         </div>
@@ -170,8 +157,8 @@
             </div>
         </div>
     </footer>
-    <link rel="stylesheet" id="googleFontsPT-css" href="resources/assets/css/css.css" type="text/css" media="all">
-    <script data-cfasync="false" src="resources/assets/js/email-decode.min.js"></script>
+    <link rel="stylesheet" id="googleFontsPT-css" href="<?php echo base_url();?>resources/assets/css/css.css" type="text/css" media="all">
+    <script data-cfasync="false" src="<?php echo base_url();?>resources/assets/js/email-decode.min.js"></script>
     <script type="text/javascript">
         var edsanimate_options = {
             "offset": "75",
@@ -188,7 +175,7 @@
             "metadata": "no"
         };
     </script>
-    <script type="text/javascript" defer src="resources/assets/js/autoptimize.js"></script>
+    <script type="text/javascript" defer src="<?php echo base_url();?>resources/assets/js/autoptimize.js"></script>
 </body>
 
 </html>

@@ -16,7 +16,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <title>VU IEEE :: Login</title>
+    <meta name="generator" content="Powered by IEEE VU.">
+    <meta name="msapplication-TileImage" content="<?php echo base_url();?>resources/assets/img/uploads/2016/04/icon.png">
+    
+    <link rel="icon" href="<?php echo base_url();?>resources/assets/img/icon/icon.ico" sizes="32x32">
+    <link rel="icon" href="<?php echo base_url();?>resources/assets/img/icon/icon.ico" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="<?php echo base_url();?>resources/assets/img/icon/icon.ico">
 
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">

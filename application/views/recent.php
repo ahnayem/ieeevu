@@ -4,30 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>IEEE VU :: Recents Events</title>
+    <title>IEEE VU :: Upcoming Events</title>
     <meta name="generator" content="Powered by IEEE VU.">
-    <meta name="msapplication-TileImage" content="resources/assets/img/uploads/2016/04/icon.png">
+    <meta name="msapplication-TileImage" content="<?php echo base_url();?>resources/assets/img/uploads/2016/04/icon.png">
 
-    <link type="text/css" media="all" href="resources/assets/css/autoptimize.css" rel="stylesheet">
+    <link type="text/css" media="all" href="<?php echo base_url();?>resources/assets/css/autoptimize.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-    <link rel="icon" type="image/png" href="resources/assets/img/uploads/2016/03/Untitled-2.png">
+    <link rel="icon" type="image/png" href="<?php echo base_url();?>resources/assets/img/uploads/2016/03/Untitled-2.png">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
 
-    <link rel="icon" href="resources/assets/css/fontawesome.min.css" sizes="32x32">
-    <link rel="icon" href="resources/assets/img/icon/icon.ico" sizes="32x32">
-    <link rel="icon" href="resources/assets/img/icon/icon.ico" sizes="192x192">
-    <link rel="apple-touch-icon-precomposed" href="resources/assets/img/icon/icon.ico">
+    <link rel="icon" href="<?php echo base_url();?>resources/assets/css/fontawesome.min.css" sizes="32x32">
+    <link rel="icon" href="<?php echo base_url();?>resources/assets/img/icon/icon.ico" sizes="32x32">
+    <link rel="icon" href="<?php echo base_url();?>resources/assets/img/icon/icon.ico" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="<?php echo base_url();?>resources/assets/img/icon/icon.ico">
 
-
-
-
-    <script type="text/javascript" src="resources/assets/js/jquery.js"></script>
-    <script type="text/javascript" src="resources/assets/js/fontawesome.min.js"></script>
-
-    
-    
+    <script type="text/javascript" src="<?php echo base_url();?>resources/assets/js/jquery.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>resources/assets/js/fontawesome.min.js"></script>
+   
 </head>
 
 <body data-rsssl="1" class="home page-template-default page page-id-4 front builder not-breadcrumb preload group-blog masthead-fixed grid">
@@ -60,7 +55,7 @@
                     <div class="col-md-4"></div>
                     <div class="col-md-4">
                         <div class="logo">
-                            <a href="<?php echo base_url();?>"><img id="logo" class="img-responsive" src="resources/assets/img/icon/logo-main.png" data-no-retina alt="IEEE VU"></a>
+                            <a href="<?php echo base_url();?>"><img id="logo" class="img-responsive" src="<?php echo base_url();?>resources/assets/img/icon/logo-main.png" data-no-retina alt="IEEE VU"></a>
                         </div>
                     </div>
                     <div class="col-md-4"></div>
@@ -109,136 +104,43 @@
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-12" style="background: transparent  ">
                                         <div class="heading-block text-center heading-block-line">
-                                            <h1 class="special-heading">RECENTS EVENTS</h1></div>
+                                            <h1 class="special-heading">RECENT EVENTS</h1></div>
                                     </div>
                                 </div>
-                                <div class="row">
+                                <br><br>
+                                <div class="row" style="padding-bottom: 70vh">
                                     <div class="container" style="text-align: center;">
                                         <div class="row">
+                                            <?php $i=1; foreach ($result as $row): ?>
                                             <div class="col-md-6">
                                                 <article class="clearfix blogpost-1 post-6969 post type-post status-publish format-image hentry category-featured category-non-technical-talk category-seminars category-workshop post_format-post-format-image">
                                                     <div class="overlay-container">
-                                                        <a href="<?php echo base_url();?>detail" class="image-wrapper mask-wrapper"> <img class="aligncenter size-large wp-image-6970" src="https://ieeeaiubsb.com/wp-content/uploads/2018/12/NBI_7339.jpg" alt="" width="1024" height="768" /> <span class="mask"><span class="triangle"><i class="fa fa-link"></i></span></span>
+                                                        <a href="<?php echo base_url();?>page/detail/<?php echo $row->id ?>" class="image-wrapper mask-wrapper"> <img class="aligncenter size-large wp-image-6970" src="./resources/assets1/img/events_photo/<?php echo $row->image?>" alt="" width="1024" height="768" /> <span class="mask"><span class="triangle"><i class="fa fa-link"></i></span></span>
                                                         </a>
                                                     </div>
+                                                    <?php $date=$row->date ?>
                                                     <div class="blogpost-body" style="text-align: justify;">
-                                                        <div class="post-info-1"><span class="day">01</span><span class="month">Dec, 2018</span></div>
+                                                        <div class="post-info-1"><span class="day"><?php echo date("d", strtotime($date)); ?></span><span class="month"><?php echo date("M, Y", strtotime($date)); ?></span></div>
                                                         <div class="blogpost-content">
                                                             <header>
-                                                                <div style="background-color: #505050; padding: 10px;"><h2 class='title'><a href="<?php echo base_url();?>detail" style="color: #fff;">IEEE VU Student Branch presents “Student Professional Awareness Venture”</a></h2></div>
+                                                                <div style="background-color: #505050; padding: 10px;"><h2 class='title'><a href="<?php echo base_url();?>page/detail/<?php echo $row->id?>" style="color: #fff;"><?php echo $row->title?></a></h2></div>
                                                                 
-                                                                <div class="submitted" style="padding-top: 5px"><i class="fa fa-user pr-5"></i> by <a href="#"   style="color: #ba3f31">Rafid Azad</a></div>
+                                                                <div class="submitted" style="padding-top: 5px"><i class="fa fa-user pr-5"></i> by <a href="#"   style="color: #ba3f31"><?php echo $row->post_by?></a></div>
                                                             </header>
 
-                                                            <p>On 1st December 2018, the IEEE Student Professional Awareness Venture (SPAVe) was organized by IEEE AIUB Student Branch in association with IEEE...</p>
+                                                            <p><?php echo substr($row->detail,0,100).'...'?></p>
                                                         </div>
                                                     </div>
                                                     <footer class="clearfix">
                                                         <ul class="links pull-left">
-                                                            <li><i class="fa fa-folder-open-o"></i><a href="#" rel="category tag">Featured Event</a>, <a href="#" rel="category tag">Non-Technical Talk</a>, <a href="#" rel="category tag">Seminars</a>, <a href="#" rel="category tag">Workshops</a></li>
-                                                        </ul> <a class="pull-right link" href="<?php echo base_url();?>detail"><span>Read more</span></a></footer>
+                                                            <li><i class="fa fa-folder-open-o"></i><a href="#" rel="category tag"><?php echo $row->tag?></a></li>
+                                                        </ul> <a class="pull-right link" href="<?php echo base_url();?>page/detail<?php echo $row->id?>"><span>Read more</span></a></footer>
                                                 </article>
                                             </div>
-                                            <div class="col-md-6">
-                                                <article class="clearfix blogpost-1 post-6969 post type-post status-publish format-image hentry category-featured category-non-technical-talk category-seminars category-workshop post_format-post-format-image">
-                                                    <div class="overlay-container">
-                                                        <a href="<?php echo base_url();?>detail" class="image-wrapper mask-wrapper"> <img class="aligncenter size-large wp-image-6970" src="https://ieeeaiubsb.com/wp-content/uploads/2018/12/NBI_7339.jpg" alt="" width="1024" height="768" /> <span class="mask"><span class="triangle"><i class="fa fa-link"></i></span></span>
-                                                        </a>
-                                                    </div>
-                                                    <div class="blogpost-body" style="text-align: justify;">
-                                                        <div class="post-info-1"><span class="day">01</span><span class="month">Dec, 2018</span></div>
-                                                        <div class="blogpost-content">
-                                                            <header>
-                                                                <div style="background-color: #505050; padding: 10px;"><h2 class='title'><a href="<?php echo base_url();?>detail" style="color: #fff;">IEEE VU Student Branch presents “Student Professional Awareness Venture”</a></h2></div>
-                                                                
-                                                                <div class="submitted" style="padding-top: 5px"><i class="fa fa-user pr-5"></i> by <a href="#"   style="color: #ba3f31">Rafid Azad</a></div>
-                                                            </header>
-
-                                                            <p>On 1st December 2018, the IEEE Student Professional Awareness Venture (SPAVe) was organized by IEEE AIUB Student Branch in association with IEEE...</p>
-                                                        </div>
-                                                    </div>
-                                                    <footer class="clearfix">
-                                                        <ul class="links pull-left">
-                                                            <li><i class="fa fa-folder-open-o"></i><a href="#" rel="category tag">Featured Event</a>, <a href="#" rel="category tag">Non-Technical Talk</a>, <a href="#" rel="category tag">Seminars</a>, <a href="#" rel="category tag">Workshops</a></li>
-                                                        </ul> <a class="pull-right link" href="<?php echo base_url();?>detail"><span>Read more</span></a></footer>
-                                                </article>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <article class="clearfix blogpost-1 post-6969 post type-post status-publish format-image hentry category-featured category-non-technical-talk category-seminars category-workshop post_format-post-format-image">
-                                                    <div class="overlay-container">
-                                                        <a href="<?php echo base_url();?>detail" class="image-wrapper mask-wrapper"> <img class="aligncenter size-large wp-image-6970" src="https://ieeeaiubsb.com/wp-content/uploads/2018/12/NBI_7339.jpg" alt="" width="1024" height="768" /> <span class="mask"><span class="triangle"><i class="fa fa-link"></i></span></span>
-                                                        </a>
-                                                    </div>
-                                                    <div class="blogpost-body" style="text-align: justify;">
-                                                        <div class="post-info-1"><span class="day">01</span><span class="month">Dec, 2018</span></div>
-                                                        <div class="blogpost-content">
-                                                            <header>
-                                                                <div style="background-color: #505050; padding: 10px;"><h2 class='title'><a href="<?php echo base_url();?>detail" style="color: #fff;">IEEE VU Student Branch presents “Student Professional Awareness Venture”</a></h2></div>
-                                                                
-                                                                <div class="submitted" style="padding-top: 5px"><i class="fa fa-user pr-5"></i> by <a href="#"   style="color: #ba3f31">Rafid Azad</a></div>
-                                                            </header>
-
-                                                            <p>On 1st December 2018, the IEEE Student Professional Awareness Venture (SPAVe) was organized by IEEE AIUB Student Branch in association with IEEE...</p>
-                                                        </div>
-                                                    </div>
-                                                    <footer class="clearfix">
-                                                        <ul class="links pull-left">
-                                                            <li><i class="fa fa-folder-open-o"></i><a href="#" rel="category tag">Featured Event</a>, <a href="#" rel="category tag">Non-Technical Talk</a>, <a href="#" rel="category tag">Seminars</a>, <a href="#" rel="category tag">Workshops</a></li>
-                                                        </ul> <a class="pull-right link" href="<?php echo base_url();?>detail"><span>Read more</span></a></footer>
-                                                </article>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <article class="clearfix blogpost-1 post-6969 post type-post status-publish format-image hentry category-featured category-non-technical-talk category-seminars category-workshop post_format-post-format-image">
-                                                    <div class="overlay-container">
-                                                        <a href="<?php echo base_url();?>detail" class="image-wrapper mask-wrapper"> <img class="aligncenter size-large wp-image-6970" src="https://ieeeaiubsb.com/wp-content/uploads/2018/12/NBI_7339.jpg" alt="" width="1024" height="768" /> <span class="mask"><span class="triangle"><i class="fa fa-link"></i></span></span>
-                                                        </a>
-                                                    </div>
-                                                    <div class="blogpost-body" style="text-align: justify;">
-                                                        <div class="post-info-1"><span class="day">01</span><span class="month">Dec, 2018</span></div>
-                                                        <div class="blogpost-content">
-                                                            <header>
-                                                                <div style="background-color: #505050; padding: 10px;"><h2 class='title'><a href="<?php echo base_url();?>detail" style="color: #fff;">IEEE VU Student Branch presents “Student Professional Awareness Venture”</a></h2></div>
-                                                                
-                                                                <div class="submitted" style="padding-top: 5px"><i class="fa fa-user pr-5"></i> by <a href="#"   style="color: #ba3f31">Rafid Azad</a></div>
-                                                            </header>
-
-                                                            <p>On 1st December 2018, the IEEE Student Professional Awareness Venture (SPAVe) was organized by IEEE AIUB Student Branch in association with IEEE...</p>
-                                                        </div>
-                                                    </div>
-                                                    <footer class="clearfix">
-                                                        <ul class="links pull-left">
-                                                            <li><i class="fa fa-folder-open-o"></i><a href="#" rel="category tag">Featured Event</a>, <a href="#" rel="category tag">Non-Technical Talk</a>, <a href="#" rel="category tag">Seminars</a>, <a href="#" rel="category tag">Workshops</a></li>
-                                                        </ul> <a class="pull-right link" href="<?php echo base_url();?>detail"><span>Read more</span></a></footer>
-                                                </article>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <article class="clearfix blogpost-1 post-6969 post type-post status-publish format-image hentry category-featured category-non-technical-talk category-seminars category-workshop post_format-post-format-image">
-                                                    <div class="overlay-container">
-                                                        <a href="<?php echo base_url();?>detail" class="image-wrapper mask-wrapper"> <img class="aligncenter size-large wp-image-6970" src="https://ieeeaiubsb.com/wp-content/uploads/2018/12/NBI_7339.jpg" alt="" width="1024" height="768" /> <span class="mask"><span class="triangle"><i class="fa fa-link"></i></span></span>
-                                                        </a>
-                                                    </div>
-                                                    <div class="blogpost-body" style="text-align: justify;">
-                                                        <div class="post-info-1"><span class="day">01</span><span class="month">Dec, 2018</span></div>
-                                                        <div class="blogpost-content">
-                                                            <header>
-                                                                <div style="background-color: #505050; padding: 10px;"><h2 class='title'><a href="<?php echo base_url();?>detail" style="color: #fff;">IEEE VU Student Branch presents “Student Professional Awareness Venture”</a></h2></div>
-                                                                
-                                                                <div class="submitted" style="padding-top: 5px"><i class="fa fa-user pr-5"></i> by <a href="#"   style="color: #ba3f31">Rafid Azad</a></div>
-                                                            </header>
-
-                                                            <p>On 1st December 2018, the IEEE Student Professional Awareness Venture (SPAVe) was organized by IEEE AIUB Student Branch in association with IEEE...</p>
-                                                        </div>
-                                                    </div>
-                                                    <footer class="clearfix">
-                                                        <ul class="links pull-left">
-                                                            <li><i class="fa fa-folder-open-o"></i><a href="#" rel="category tag">Featured Event</a>, <a href="#" rel="category tag">Non-Technical Talk</a>, <a href="#" rel="category tag">Seminars</a>, <a href="#" rel="category tag">Workshops</a></li>
-                                                        </ul> <a class="pull-right link" href="<?php echo base_url();?>detail"><span>Read more</span></a></footer>
-                                                </article>
-                                            </div>
+                                            <?php endforeach; ?>
                                         </div>
                                     </div>
                                 </div>
-
                             </section>
                         </div>
                     </div>
@@ -266,8 +168,8 @@
             </div>
         </div>
     </footer>
-    <link rel="stylesheet" id="googleFontsPT-css" href="resources/assets/css/css.css" type="text/css" media="all">
-    <script data-cfasync="false" src="resources/assets/js/email-decode.min.js"></script>
+    <link rel="stylesheet" id="googleFontsPT-css" href="<?php echo base_url();?>resources/assets/css/css.css" type="text/css" media="all">
+    <script data-cfasync="false" src="<?php echo base_url();?>resources/assets/js/email-decode.min.js"></script>
     <script type="text/javascript">
         var edsanimate_options = {
             "offset": "75",
@@ -284,7 +186,7 @@
             "metadata": "no"
         };
     </script>
-    <script type="text/javascript" defer src="resources/assets/js/autoptimize.js"></script>
+    <script type="text/javascript" defer src="<?php echo base_url();?>resources/assets/js/autoptimize.js"></script>
 </body>
 
 </html>

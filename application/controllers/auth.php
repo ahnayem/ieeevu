@@ -27,6 +27,8 @@ class Auth extends CI_Controller {
 			$data['user_id']=$result->id;
 			$data['user_name']=$result->name;
 			$data['user_email']=$result->email;
+			$data['user_image']=$result->image;
+			$data['user_date']=date('d M, Y',strtotime($result->date));
 
 			$this->session->set_userdata($data);
 			redirect('dashboard/index');

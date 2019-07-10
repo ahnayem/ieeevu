@@ -65,3 +65,5 @@ $route['contact'] = 'page/contact';
 $route['signin'] = 'page/signin';
 
 $route['login']='auth/login';
+
+$route['test']='page/test';

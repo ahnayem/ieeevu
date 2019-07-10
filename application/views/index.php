@@ -6,25 +6,22 @@
     <meta name="viewport" content="width=device-width">
     <title>IEEE VU :: Home</title>
     <meta name="generator" content="Powered by IEEE VU.">
-    <meta name="msapplication-TileImage" content="resources/assets/img/uploads/2016/04/icon.png">
+    <meta name="msapplication-TileImage" content="<?php echo base_url();?>resources/assets/img/uploads/2016/04/icon.png">
 
-    <link type="text/css" media="all" href="resources/assets/css/autoptimize.css" rel="stylesheet">
+    <link type="text/css" media="all" href="<?php echo base_url();?>resources/assets/css/autoptimize.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-    <link rel="icon" type="image/png" href="resources/assets/img/uploads/2016/03/Untitled-2.png">
+    <link rel="icon" type="image/png" href="<?php echo base_url();?>resources/assets/img/uploads/2016/03/Untitled-2.png">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
 
-    <link rel="icon" href="resources/assets/css/fontawesome.min.css" sizes="32x32">
-    <link rel="icon" href="resources/assets/img/icon/icon.ico" sizes="32x32">
-    <link rel="icon" href="resources/assets/img/icon/icon.ico" sizes="192x192">
-    <link rel="apple-touch-icon-precomposed" href="resources/assets/img/icon/icon.ico">
+    <link rel="icon" href="<?php echo base_url();?>resources/assets/css/fontawesome.min.css" sizes="32x32">
+    <link rel="icon" href="<?php echo base_url();?>resources/assets/img/icon/icon.ico" sizes="32x32">
+    <link rel="icon" href="<?php echo base_url();?>resources/assets/img/icon/icon.ico" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="<?php echo base_url();?>resources/assets/img/icon/icon.ico">
 
-
-
-
-    <script type="text/javascript" src="resources/assets/js/jquery.js"></script>
-    <script type="text/javascript" src="resources/assets/js/fontawesome.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>resources/assets/js/jquery.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>resources/assets/js/fontawesome.min.js"></script>
 
     <script>
         (function(i, s, o, g, r, a, m) {
@@ -77,7 +74,7 @@
                     <div class="col-md-4"></div>
                     <div class="col-md-4">
                         <div class="logo">
-                            <a href="<?php echo base_url();?>"><img id="logo" class="img-responsive" src="resources/assets/img/icon/logo-main.png" data-no-retina alt="IEEE VU"></a>
+                            <a href="<?php echo base_url();?>"><img id="logo" class="img-responsive" src="<?php echo base_url();?>resources/assets/img/icon/logo-main.png" data-no-retina alt="IEEE VU"></a>
                         </div>
                     </div>
                     <div class="col-md-4"></div>
@@ -144,9 +141,9 @@
                                             });
                                         </script>
                                         <div class="owl-carousel slideshow" id="owl-carousel-5ce53fc95d8e3">
-                                            <div class="owl-slideshow-item"> <img data-no-retina src="resources/assets/img/uploads/2015/02/Best-Student-Branch-1920x928.jpg" width="1920" height="928" alt="Best-Student-Branch"> <span class="caption">Best-Student-Branch</span></div>
-                                            <div class="owl-slideshow-item"> <img data-no-retina src="resources/assets/img/uploads/2015/02/website-contest-1920x928.jpg" width="1920" height="928" alt="website-contest"> <span class="caption">website-contest</span></div>
-                                            <div class="owl-slideshow-item"> <img data-no-retina src="resources/assets/img/uploads/2015/02/group-photo-1920x928.jpg" width="1920" height="928" alt="IEEE AIUB Student Branch Recreational Tour 2017"> <span class="caption">IEEE AIUB Student Branch Recreational Tour 2017</span></div>
+                                            <div class="owl-slideshow-item"> <img data-no-retina src="<?php echo base_url();?>resources/assets/img/uploads/2015/02/Best-Student-Branch-1920x928.jpg" width="1920" height="928" alt="Best-Student-Branch"> <span class="caption">Best-Student-Branch</span></div>
+                                            <div class="owl-slideshow-item"> <img data-no-retina src="<?php echo base_url();?>resources/assets/img/uploads/2015/02/website-contest-1920x928.jpg" width="1920" height="928" alt="website-contest"> <span class="caption">website-contest</span></div>
+                                            <div class="owl-slideshow-item"> <img data-no-retina src="<?php echo base_url();?>resources/assets/img/uploads/2015/02/group-photo-1920x928.jpg" width="1920" height="928" alt="IEEE AIUB Student Branch Recreational Tour 2017"> <span class="caption">IEEE AIUB Student Branch Recreational Tour 2017</span></div>
                                         </div>
                                     </div>
                                 </div>
@@ -255,7 +252,7 @@
                                                 <ul class="slides">
                                                     <li>
                                                         <div class="testimonial">
-                                                            <a href="http://index.html" target="_blank"> <img data-no-retina src="resources/assets/img/uploads/2016/05/Justine.png" alt="Justine Spack, Online Community Specialist, IEEE Member and Geographic Activities (MGA)"> </a>
+                                                            <a href="http://index.html" target="_blank"> <img data-no-retina src="<?php echo base_url();?>resources/assets/img/uploads/2016/05/Justine.png" alt="Justine Spack, Online Community Specialist, IEEE Member and Geographic Activities (MGA)"> </a>
                                                             <blockquote>
                                                                 <p>Congratulations to all of the members of the IEEE AIUB Student Branch! I love reading about all of your achievements in Abozzo. I enjoy reading about the awards youâ€™ve won and the activities you hold like industrial tours, the FREEDM Concept seminar, and STEM events for children. I wish you the best of luck and continued success in your efforts!</p>
                                                             </blockquote>
@@ -264,7 +261,7 @@
                                                     </li>
                                                     <li>
                                                         <div class="testimonial">
-                                                            <a href="http://index.html" target="_blank"> <img data-no-retina src="resources/assets/img/uploads/2016/05/Mehvish-Zahoor-150x150.png" alt="Mehvish Zahoor, Former Regional Student Representative (RSR), IEEE Region 10 (Asia-Pacific)"> </a>
+                                                            <a href="http://index.html" target="_blank"> <img data-no-retina src="<?php echo base_url();?>resources/assets/img/uploads/2016/05/Mehvish-Zahoor-150x150.png" alt="Mehvish Zahoor, Former Regional Student Representative (RSR), IEEE Region 10 (Asia-Pacific)"> </a>
                                                             <blockquote>
                                                                 <p>It's an honour to write for AIUB. It was great visiting biggest student branch of Bangladesh section in 2015. I believe the AIUB Student Branch is setting an exemplary role in R10 in terms of teamwork, motivation, volunteering, commitment and innovation. I look forward to the branch team to continue their devotion in raising the bar everyday.</p>
                                                             </blockquote>
@@ -273,7 +270,7 @@
                                                     </li>
                                                     <li>
                                                         <div class="testimonial">
-                                                            <a href="#" target="_blank"> <img data-no-retina src="resources/assets/img/uploads/2016/05/Farah-Nazifa-150x150.png" alt="Farah Nazifa, Lead, Google Women Techmakers Bangladesh"> </a>
+                                                            <a href="#" target="_blank"> <img data-no-retina src="<?php echo base_url();?>resources/assets/img/uploads/2016/05/Farah-Nazifa-150x150.png" alt="Farah Nazifa, Lead, Google Women Techmakers Bangladesh"> </a>
                                                             <blockquote>
                                                                 <p>I really appreciate the efforts coming from the enthusiastic IEEE AIUB Student Branch volunteers who worked together to make the event of Women Techmakers a successful one. In the near future, we are looking forward to organize more events at your wonderful campus! Best wishes!</p>
                                                             </blockquote>
@@ -380,8 +377,8 @@
             </div>
         </div>
     </footer>
-    <link rel="stylesheet" id="googleFontsPT-css" href="resources/assets/css/css.css" type="text/css" media="all">
-    <script data-cfasync="false" src="resources/assets/js/email-decode.min.js"></script>
+    <link rel="stylesheet" id="googleFontsPT-css" href="<?php echo base_url();?>resources/assets/css/css.css" type="text/css" media="all">
+    <script data-cfasync="false" src="<?php echo base_url();?>resources/assets/js/email-decode.min.js"></script>
     <script type="text/javascript">
         var edsanimate_options = {
             "offset": "75",
@@ -398,7 +395,7 @@
             "metadata": "no"
         };
     </script>
-    <script type="text/javascript" defer src="resources/assets/js/autoptimize.js"></script>
+    <script type="text/javascript" defer src="<?php echo base_url();?>resources/assets/js/autoptimize.js"></script>
 </body>
 
 </html>

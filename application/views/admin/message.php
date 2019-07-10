@@ -12,6 +12,22 @@
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url()?>resources/assets1/img/icon.ico">
     <title>Admin Dashboard</title>
     <link href="<?php echo base_url()?>resources/assets1/css/style.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <script src="<?php echo base_url()?>resources/assets1/js/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <style type="text/css">
+        th{
+            text-align: center;
+        }
+
+        thead{
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>
@@ -67,6 +83,7 @@
                     <!-- ============================================================== -->
                     <ul class="navbar-nav float-left mr-auto">
                         <li class="nav-item d-none d-md-block"><a class="nav-link sidebartoggler waves-effect waves-light" href="javascript:void(0)" data-sidebartype="mini-sidebar"><i class="mdi mdi-menu font-24"></i></a></li>
+                        <li class="nav-item d-none d-md-block"><a class="nav-link waves-effect waves-light" href="<?php echo base_url()?>" target="_blank"><span style="color: #ffb848; font-weight: bold">Main Site &nbsp<i class="mdi mdi-home"></span></i></a></li>
                     </ul>
                     <!-- ============================================================== -->
                     <!-- Right side toggle and nav items -->
@@ -77,17 +94,15 @@
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
-                            
                             <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span style="color: #ffb848; font-weight: bold">Hello, <?php echo $this->session->userdata('user_name') ?>&nbsp</span>
-                                <img src="<?php echo base_url()?>resources/assets1/img/users/1.jpg" alt="user" class="rounded-circle" width="31"></a>
+                                <img src="<?php echo base_url()?>resources/assets1/img/users/<?php echo $this->session->userdata('user_image') ?>" alt="user" class="rounded-circle" width="31"></a>
                             <div class="dropdown-menu dropdown-menu-right user-dd animated">
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> My Profile</a>
+                                <a class="dropdown-item" href="<?php echo base_url()?>dashboard/profile"><i class="ti-user m-r-5 m-l-5"></i> My Profile</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-settings m-r-5 m-l-5"></i> Profile Setting</a>
+                                <a class="dropdown-item" href="<?php echo base_url()?>dashboard/profile_setting"><i class="ti-settings m-r-5 m-l-5"></i> Profile Setting</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="<?php echo base_url()?>dashboard/logout"><i class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
-                                
                             </div>
                         </li>
                         <!-- ============================================================== -->
@@ -126,12 +141,7 @@
                             </ul>
                         </li>
                         
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">Membership </span></a>
-                            <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="<?php echo base_url()?>dashboard/members" class="sidebar-link"><i class="mdi mdi-account"></i><span class="hide-menu"> All Members </span></a></li>
-                                <li class="sidebar-item"><a href="<?php echo base_url()?>dashboard/registration" class="sidebar-link"><i class="mdi mdi-account-plus"></i><span class="hide-menu"> Registration </span></a></li>
-                            </ul>
-                        </li>
+                        
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?php echo base_url()?>dashboard/message" aria-expanded="false"><i class="mdi mdi-message-processing"></i><span class="hide-menu">Messages</span></a></li>
                         
                     </ul>
@@ -176,57 +186,69 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-body">
-                                <div class="d-md-flex align-items-center">
-                                    <div>
-                                        <h4 class="card-title">Analysis</h4>
-                                        <h5 class="card-subtitle">Overview from the beginning</h5>
+                                <div class="row" style="padding-bottom: 20px">
+                                    <div class="col-md-4 d-md-flex align-items-center">
+                                        <div>
+                                            <h4 class="card-title">All Message</h4>
+                                            <h5 class="card-subtitle">Overview from the beginning</h5>
+                                        </div>
                                     </div>
+                                    <div class="col-md-4">
+
+                                        <?php
+
+                                        if ($this->session->userdata('message')) {
+                                            $message=$this->session->userdata('message');
+
+                                            echo '<div class="alert alert-danger"  align="center">
+                                                    Message deleted successfully!
+                                            </div>';
+                                            $this->session->unset_userdata('message');
+
+                                            
+                                        } if($this->session->userdata('error')) {
+                                            echo '<div class="alert alert-warning center"  align="center">
+                                                    Deletion failed
+                                            </div>';
+                                            $this->session->unset_userdata('error');
+                                        } ?>
+                                    </div>
+                                    <div class="col-md-4"></div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                   <i class="fa fa-user m-b-5 font-16"></i>
-                                                   <h5 class="m-b-0 m-t-5">2540</h5>
-                                                   <small class="font-light">Total Users</small>
-                                                </div>
-                                            </div>
-                                             <div class="col-6">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                   <i class="fa fa-plus m-b-5 font-16"></i>
-                                                   <h5 class="m-b-0 m-t-5">120</h5>
-                                                   <small class="font-light">New Users</small>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 m-t-15">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                   <i class="fa fa-file-alt m-b-5 font-16"></i>
-                                                   <h5 class="m-b-0 m-t-5">656</h5>
-                                                   <small class="font-light">Total Posts</small>
-                                                </div>
-                                            </div>
-                                             <div class="col-6 m-t-15">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                   <i class="fa fa-tag m-b-5 font-16"></i>
-                                                   <h5 class="m-b-0 m-t-5">21</h5>
-                                                   <small class="font-light">Total Events</small>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 m-t-15">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                   <i class="fa fa-archive m-b-5 font-16"></i>
-                                                   <h5 class="m-b-0 m-t-5">100</h5>
-                                                   <small class="font-light">Total Archives</small>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 m-t-15">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                   <i class="fa fa-globe m-b-5 font-16"></i>
-                                                   <h5 class="m-b-0 m-t-5">12</h5>
-                                                   <small class="font-light">Online users</small>
-                                                </div>
-                                            </div>
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered" id="event-table" width="100%" cellspacing="0">
+                                                <thead>
+                                                  <tr>
+                                                    <th style="width: 5%">SL</th>
+                                                    <th style="width: 15%">Name</th>
+                                                    <th style="width: 15%">Email</th>
+                                                    <th style="width: 60%">Message</th>
+                                                    <th style="width: 10%">Date</th>
+                                                    <th style="width: 5%">Action</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody align="center">
+                                                  <?php $i=1; foreach ($result as $row): ?>
+                                                  <tr>
+                                                    <td><?php echo $i++ ?></td>
+                                                    <td><?php echo $row->name?></td>
+                                                    
+                                                    <td><?php echo $row->email ?></td>
+                                                    <td><?php echo $row->message ?></td>
+
+                                                    <td><?php echo date('d/m/y',strtotime($row->date)) ?></td>
+
+
+
+                                                    <td><center>
+
+                                                    <a onclick="return ConfirmDelete();" href="<?php echo base_url()?>dashboard/message_delete/<?php echo $row->id?>" class="btn btn-warning"><i class="fa fa-trash-alt" ></i></a></center></td>
+                                                </tr>
+                                                  <?php endforeach; ?>
+                                                </tbody>            
+                                            </table>
                                         </div>
                                     </div>
                                     <!-- column -->
@@ -235,12 +257,10 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- ============================================================== -->
-                <!-- Sales chart -->
-                <!-- ============================================================== -->
-                <!-- ============================================================== -->
-                <!-- Recent comment and chats -->
-                <!-- ============================================================== -->
+
+
                 
             </div>
             <!-- ============================================================== -->
@@ -257,8 +277,6 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
-    <script src="<?php echo base_url()?>resources/assets1/js/jquery.min.js"></script>
-    <!-- Bootstrap tether Core JavaScript -->
     <script src="<?php echo base_url()?>resources/assets1/js/popper.min.js"></script>
     <script src="<?php echo base_url()?>resources/assets1/js/bootstrap.min.js"></script>
     <script src="<?php echo base_url()?>resources/assets1/js/perfect-scrollbar.jquery.min.js"></script>
@@ -270,6 +288,28 @@
     <!--Custom JavaScript -->
     <script src="<?php echo base_url()?>resources/assets1/js/custom.min.js"></script>
     <!--This page JavaScript -->
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <!-- datatable -->
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#event-table').DataTable();
+    });
+    </script>
+
+    <script type="text/javascript">
+        function ConfirmDelete()
+        {
+          var x = confirm("Are you sure you want to delete?");
+          if (x)
+              return true;
+          else
+            return false;
+        }
+    </script>
+
 
 </body>
 

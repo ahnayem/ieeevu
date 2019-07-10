@@ -8,7 +8,14 @@ class Page extends CI_Controller {
 
 	public function about(){ $this->load->view('about'); }
 
-	public function recent(){ $this->load->view('recent'); }
+	public function recent(){ 
+
+		$this->load->model('model');
+		$data['result'] = $this->model->recent_events_list();
+
+		$this->load->view('recent',$data);
+
+	}
 
 
 	public function upcoming(){ 
@@ -34,10 +41,24 @@ class Page extends CI_Controller {
 
 	public function team(){ $this->load->view('team'); }
 
-	public function gallery(){ $this->load->view('gallery'); }
+	public function gallery(){ 
+
+		$this->load->model('model');
+		$data['result'] = $this->model->galery_image();
+
+		$this->load->view('gallery',$data);
+	}
 
 	public function contact(){ $this->load->view('contact'); }
 
 	public function signin(){ $this->load->view('signin'); }
+
+	public function test()
+	{
+		$this->load->model('model');
+		$data['result'] = $this->model->all_image();
+
+		$this->load->view('test',$data);
+	}
 }
 
