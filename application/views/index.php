@@ -141,9 +141,9 @@
                                             });
                                         </script>
                                         <div class="owl-carousel slideshow" id="owl-carousel-5ce53fc95d8e3">
-                                            <div class="owl-slideshow-item"> <img data-no-retina src="<?php echo base_url();?>resources/assets/img/uploads/2015/02/Best-Student-Branch-1920x928.jpg" width="1920" height="928" alt="Best-Student-Branch"> <span class="caption">Best-Student-Branch</span></div>
-                                            <div class="owl-slideshow-item"> <img data-no-retina src="<?php echo base_url();?>resources/assets/img/uploads/2015/02/website-contest-1920x928.jpg" width="1920" height="928" alt="website-contest"> <span class="caption">website-contest</span></div>
-                                            <div class="owl-slideshow-item"> <img data-no-retina src="<?php echo base_url();?>resources/assets/img/uploads/2015/02/group-photo-1920x928.jpg" width="1920" height="928" alt="IEEE AIUB Student Branch Recreational Tour 2017"> <span class="caption">IEEE AIUB Student Branch Recreational Tour 2017</span></div>
+                                            <div class="owl-slideshow-item"> <img data-no-retina src="<?php echo base_url();?>resources/assets/img/uploads/slider/technofengy.jpg" width="1920" height="600" alt="IEEE VU Student Branch"> <span class="caption">Technofrengy</span></div>
+                                            <div class="owl-slideshow-item"> <img data-no-retina src="<?php echo base_url();?>resources/assets/img/uploads/slider/bangladesh-section.jpg" width="1920" height="600" alt="website-contest"> <span class="caption">IEEE Bangladesh Section</span></div>
+                                            <div class="owl-slideshow-item"> <img data-no-retina src="<?php echo base_url();?>resources/assets/img/uploads/slider/IEEEVUSB.jpg" width="1920" height="600" alt="IEEE VU Student Branch"> <span class="caption">IEEE VU Student Branch</span></div>
                                         </div>
                                     </div>
                                 </div>
@@ -218,79 +218,11 @@
                         </div>
                     </div>
 
-                    <div class="glacier-section" style="padding-top: 45px; padding-bottom: 45px; " id="section-5667ee170bab7">
-                        <div class="container">
-                            <section>
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-12" style="background: transparent  ">
-                                        <div class="heading-block text-center heading-block-line">
-                                            <h1 class="special-heading">WHAT PEOPLE SAY</h1></div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-12" style="background: transparent  ">
-                                        <script>
-                                            jQuery(document).ready(function() {
-                                                //Testimonial slider
-                                                //-----------------------------------------------
-                                                if (jQuery("#testimonials-5ce53fc9b55de.testimonials .flexslider").length > 0) {
-                                                    jQuery(window).load(function() {
-                                                        jQuery('.testimonials .flexslider').flexslider({
-                                                            prevText: "", //String: Set the text for the "previous" directionNav item
-                                                            nextText: "", //String: Set the text for the "next" directionNav item
-                                                            animation: "slide", //String: Select your animation type, "fade" or "slide"
-                                                            useCSS: false, //{NEW} Boolean: Slider will use CSS3 transitions if available
-                                                            animationSpeed: 900, //Integer: Set the speed of animations, in milliseconds
-                                                            controlNav: false,
-                                                        });
-                                                    });
-                                                };
-                                            });
-                                        </script>
-                                        <div class="testimonials" id="testimonials-5ce53fc9b55de">
-                                            <div class="flexslider">
-                                                <ul class="slides">
-                                                    <li>
-                                                        <div class="testimonial">
-                                                            <a href="http://index.html" target="_blank"> <img data-no-retina src="<?php echo base_url();?>resources/assets/img/uploads/2016/05/Justine.png" alt="Justine Spack, Online Community Specialist, IEEE Member and Geographic Activities (MGA)"> </a>
-                                                            <blockquote>
-                                                                <p>Congratulations to all of the members of the IEEE AIUB Student Branch! I love reading about all of your achievements in Abozzo. I enjoy reading about the awards youâ€™ve won and the activities you hold like industrial tours, the FREEDM Concept seminar, and STEM events for children. I wish you the best of luck and continued success in your efforts!</p>
-                                                            </blockquote>
-                                                            <p class="author"> Justine Spack, Online Community Specialist, IEEE Member and Geographic Activities (MGA)</p>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="testimonial">
-                                                            <a href="http://index.html" target="_blank"> <img data-no-retina src="<?php echo base_url();?>resources/assets/img/uploads/2016/05/Mehvish-Zahoor-150x150.png" alt="Mehvish Zahoor, Former Regional Student Representative (RSR), IEEE Region 10 (Asia-Pacific)"> </a>
-                                                            <blockquote>
-                                                                <p>It's an honour to write for AIUB. It was great visiting biggest student branch of Bangladesh section in 2015. I believe the AIUB Student Branch is setting an exemplary role in R10 in terms of teamwork, motivation, volunteering, commitment and innovation. I look forward to the branch team to continue their devotion in raising the bar everyday.</p>
-                                                            </blockquote>
-                                                            <p class="author"> Mehvish Zahoor, Former Regional Student Representative (RSR), IEEE Region 10 (Asia-Pacific)</p>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="testimonial">
-                                                            <a href="#" target="_blank"> <img data-no-retina src="<?php echo base_url();?>resources/assets/img/uploads/2016/05/Farah-Nazifa-150x150.png" alt="Farah Nazifa, Lead, Google Women Techmakers Bangladesh"> </a>
-                                                            <blockquote>
-                                                                <p>I really appreciate the efforts coming from the enthusiastic IEEE AIUB Student Branch volunteers who worked together to make the event of Women Techmakers a successful one. In the near future, we are looking forward to organize more events at your wonderful campus! Best wishes!</p>
-                                                            </blockquote>
-                                                            <p class="author"> Farah Nazifa, Lead, Google Women Techmakers Bangladesh</p>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                    </div>
-
-                    <div class="  glacier-section light-color custom-bg pl" style="padding-top: 45px; padding-bottom: 45px; " id="section-5719be0c1c8c2">
-                        <div data-stellar-background-ratio="0.4" class="parallax  dark-translucent-bg" style="background-color: #333; background-size: cover; background-attachment: fixed"></div>
-                        <div class="container-fluid">
+                    <div class="  glacier-section custom-bg pl" style="padding-top: 100px; padding-bottom: 45px; " id="section-5719be0c1c8c2">
+                        <div data-stellar-background-ratio="0.4" class="parallax"></div>
+                        <div class="container-fluid" style="color: #000;">
                             <div class="row">
-                                    <div class="col-xs-12 col-sm-12" style="background: transparent  ">
+                                    <div class="col-xs-12 col-sm-12" style="background: transparent;">
                                         <div class="heading-block text-center heading-block-line">
                                             <h1 class="special-heading">OUR GOAL</h1></div>
                                     </div>
@@ -299,7 +231,7 @@
                                 <div class="col-xs-12 col-sm-2" style="background: transparent  "></div>
                                 <div class="col-xs-12 col-sm-8" style="background: transparent  ">
                                     <div class="text-block shortcode-container" style="font-size: 18px;">
-                                        <p style="text-align: center; text-align: center;"><span style="color: white;">
+                                        <p style="text-align: center; text-align: center;">
                                         Our Goal is to Grow our IEEE student branch Community and accomplish our missions and visions.
                                         </p>
                                     </div>
@@ -307,7 +239,6 @@
                             </div>
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12" style="background: transparent  ">
-                                        <div style="padding-bottom: 50px;"></div>
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-2" style="background: transparent  "></div>
@@ -329,7 +260,7 @@
                                 <p style=" text-align: justify;">IEEE Varendra University (VU) Student Branch was established in Rajshahi, Bangladesh and is registered under the Institute of Electrical and Electronics Engineers (IEEE) in Rajshahi, Bangladesh.</p>
                                 <ul class="info">
                                     <li><i class="fa fa-map-marker"></i> 529/1, Kazla, Motihar, Rajshahi</li>
-                                    <li><i class="fa fa-phone"></i> +880 1234 567 890</li>
+                                    <li><i class="fa fa-phone"></i> +880 1730 406 514</li>
                                     <li><i class="fa fa-envelope-o"></i> ieevu@vu.edu.bd</li>
                                 </ul>
                                 <ul class="social-links">

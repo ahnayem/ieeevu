@@ -134,7 +134,7 @@
                                                     <footer class="clearfix">
                                                         <ul class="links pull-left">
                                                             <li><i class="fa fa-folder-open-o"></i><a href="#" rel="category tag"><?php echo $row->tag?></a></li>
-                                                        </ul> <a class="pull-right link" href="<?php echo base_url();?>page/detail<?php echo $row->id?>"><span>Read more</span></a></footer>
+                                                        </ul> <a class="pull-right link" href="<?php echo base_url();?>page/detail/<?php echo $row->id?>"><span>Read more</span></a></footer>
                                                 </article>
                                             </div>
                                             <?php endforeach; ?>
