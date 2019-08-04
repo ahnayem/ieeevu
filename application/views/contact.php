@@ -151,7 +151,7 @@
                                         
                                                 <!-- Message body -->
                                                 <div class="form-group">
-                                                    <textarea class="form-control" id="message" name="message" placeholder="Please enter your message here..." rows="5" required></textarea>
+                                                    <textarea class="form-control" id="message" name="message" placeholder="Please type your message here, less than 1000 character..." maxlength="1000" rows="5" required></textarea>
                                                 </div>
                                         
                                                 <!-- Form actions -->
